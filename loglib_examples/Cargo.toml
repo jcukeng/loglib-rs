@@ -1,0 +1,35 @@
+[package]
+name = "loglib-examples"
+version = "0.2.0"
+edition = "2021"
+authors = ["jcuk3ng <у.меня@её.нет>"]
+description = "Примеры использования loglib: синхронные и асинхронные"
+
+# Зависимость от соседнего крейта
+[dependencies.loglib]
+path = "../loglib"
+
+# Для асинхронного примера
+[dependencies.tokio]
+version = "1.37"
+features = ["full"]
+
+[[bin]]
+name = "example_simple"
+path = "src/bin/simple.rs"
+
+[[bin]]
+name = "example_advanced"
+path = "src/bin/advanced.rs"
+
+[[bin]]
+name = "example_error_init"
+path = "src/bin/error_init.rs"
+
+[[bin]]
+name = "example_tokio"
+path = "src/bin/tokio_async.rs"
+
+[[bin]]
+name = "example_rotation"
+path = "src/bin/rotation.rs"

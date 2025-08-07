@@ -1,0 +1,13 @@
+[package]
+name = "winlog-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["jcuk3ng <у.меня@её.нет>"]
+description = "Windows Event Log с fallback на Application"
+license = "MIT"
+
+[dependencies]
+windows-sys = { version = "0.52", features = [
+    "Win32_Foundation",
+    "Win32_System_EventLog",
+] }
